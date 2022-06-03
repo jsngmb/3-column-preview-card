@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+:root {
+  --BrightOrange: hsl(31, 77%, 52%);
+  --DarkCyan: hsl(184, 100%, 22%);
+  --VeryDarkCyan: hsl(179, 100%, 13%);
+}
+
+body {
+  margin: 0;
+}
+
+main .container {
+  width: 440px;
+}
+
+main .container .sedans, main .container .suv, main .container .luxury {
+  padding: 3em;
+}
+
+main .container .sedans h1, main .container .sedans h2, main .container .sedans h3, main .container .suv h1, main .container .suv h2, main .container .suv h3, main .container .luxury h1, main .container .luxury h2, main .container .luxury h3 {
+  font-family: 'Big Shoulders Display';
+  font-weight: 700;
+  font-size: 2.5em;
+  color: white;
+}
+
+main .container .sedans p, main .container .suv p, main .container .luxury p {
+  color: rgba(255, 255, 255, 0.537);
+  font-family: 'Lexend Deca';
+  padding-right: 4em;
+}
+
+main .container .sedans button, main .container .suv button, main .container .luxury button {
+  border-radius: 30px;
+  padding: 10px 20px;
+  background-color: white;
+  border: none;
+  font-weight: 700;
+  font-family: 'Lexend Deca';
+  color: var(--BrightOrange);
+}
+
+main .container .sedans {
+  background-color: var(--BrightOrange);
+  border-radius: 5px 5px 0 0;
+}
+
+main .container .sedans button {
+  color: var(--BrightOrange);
+}
+
+main .container .suv {
+  background-color: var(--DarkCyan);
+}
+
+main .container .suv button {
+  color: var(--DarkCyan);
+}
+
+main .container .luxury {
+  background-color: var(--VeryDarkCyan);
+  border-radius: 0 0 5px 5px;
+}
+
+main .container .luxury button {
+  color: var(--VeryDarkCyan);
+}
+
+@media (min-width: 900px) {
+  main {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  main .container {
+    width: 900px;
+  }
+  main .container .col-lg-4 {
+    padding: 0;
+  }
+  main .container .col-lg-4 .sedans, main .container .col-lg-4 .suv, main .container .col-lg-4 .luxury {
+    padding: 2em;
+  }
+  main .container .col-lg-4 .sedans p, main .container .col-lg-4 .suv p, main .container .col-lg-4 .luxury p {
+    padding-right: 0;
+  }
+  main .container .col-lg-4 .sedans {
+    border-radius: 5px 0 0 5px;
+  }
+  main .container .col-lg-4 .luxury {
+    border-radius: 0 5px 5px 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */

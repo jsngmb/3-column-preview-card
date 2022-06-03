@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+:root {
+    --BrightOrange: hsl(31, 77%, 52%);
+    --DarkCyan: hsl(184, 100%, 22%);
+    --VeryDarkCyan: hsl(179, 100%, 13%);
+}
+body {
+    margin: 0;
+}
+
+main {
+    .container {
+        width: 440px;
+        
+        .sedans,.suv,.luxury {
+            
+            padding: 3em;
+            h1,h2,h3 {
+                font-family: 'Big Shoulders Display';
+                font-weight: 700;
+                font-size: 2.5em;
+                color: white;
+            }
+            p {
+                color: rgba(255, 255, 255, 0.537);
+                font-family: 'Lexend Deca';
+                padding-right: 4em;
+
+            }
+            button {
+                border-radius: 30px;
+                padding: 10px 20px;
+                background-color: white;
+                border: none;
+                font-weight: 700;
+                font-family: 'Lexend Deca';
+                color: var(--BrightOrange);
+            }
+        }
+        .sedans {
+            background-color: var(--BrightOrange);
+            border-radius: 5px 5px 0 0; //top left, top right
+            button {
+                color: var(--BrightOrange);
+            }
+        }
+        .suv {
+            background-color: var(--DarkCyan);
+            button {
+                color: var(--DarkCyan);
+            }
+        }
+        .luxury {
+            background-color: var(--VeryDarkCyan);
+            border-radius: 0 0 5px 5px;
+            button {
+                color: var(--VeryDarkCyan);
+            }
+        }
+    }
+}
+
+@media (min-width: 900px) {
+    main {
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        .container {
+        width: 900px;
+        .col-lg-4 {
+            padding: 0;
+
+            .sedans,.suv,.luxury {
+                padding: 2em;
+                p {
+
+                    padding-right: 0;
+                }
+            }
+            .sedans {
+                border-radius: 5px 0 0 5px; //top left, bottom left
+            }
+            .luxury {
+                border-radius: 0 5px 5px 0;
+            }
+        }
+        
+        }
+    }
+}
